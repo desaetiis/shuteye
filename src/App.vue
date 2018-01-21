@@ -3,11 +3,15 @@
     <img src="./assets/cat_sleep_dribbble.gif" width="300px" v-bind:class="{visible}">
     <HelloWorld v-bind:class="{visible}"/>
   <button v-bind:class="{visible}" @click="hidden=!hidden, visible=!visible">Let's wind down</button>
-    <Audio1 v-bind:class="{hidden}"/>
-    <Audio2 v-bind:class="{hidden}"/>
-    <Audio3 v-bind:class="{hidden}"/>
-    <Audio4 v-bind:class="{hidden}"/>
+<div class="audiolist">
+    <div class="player"><Audio1 v-bind:class="{hidden}"/></div>
+  <div class="player"><Audio2 v-bind:class="{hidden}"/></div>
+  <div class="player"><Audio3 v-bind:class="{hidden}"/></div>
+  <div class="player"><Audio4 v-bind:class="{hidden}"/></div>
+  </div>
+  <div class="backbtn">
   <button v-bind:class="{hidden, back}" @click="hidden=!hidden, visible=!visible, back">Back</button>
+  </div>
   </div>
 </template>
 
@@ -51,16 +55,21 @@ export default {
 body {
 background-color: #182435;
 }
+.audiolist {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  grid-gap: 5px;
+}
+
 .hidden {
   display: none;
 }
 .visible {
   display: none;
 }
-.back {
+.backbtn {
   position: fixed;
  margin: 0 auto;
-
  left: 2em;
  bottom: 2em;
 }
@@ -73,7 +82,5 @@ button {
   padding: 10px;
   margin-bottom: 2em;
 }
-audio {
 
-}
 </style>
