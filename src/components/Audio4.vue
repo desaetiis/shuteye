@@ -1,5 +1,5 @@
 <template lang="html">
-<div id="audio4" v-bind:class="{hidden:hidden}">
+<div id="audio4">
   <p>Waterfall</p>
   <audio volume="0.1" id="audio4_2"src="http://file.kuyinyun.com/group2/M00/61/1A/rBBGelcTAZCAcQ4cAAcmErMReH4964.mp3" loop></audio>
 <div class="controls4">
