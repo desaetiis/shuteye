@@ -28,7 +28,7 @@ export default {
   methods: {
     play: function(event) {
       var a = this.audioOne;
-      a.oncanplaythrough = isAppLoaded;
+      a.preload = "auto";
       a.loop = true;
       var playBtn = this.$refs.playBtn;
       a.volume = this.volumeVal;
