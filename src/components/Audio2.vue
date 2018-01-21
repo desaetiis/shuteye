@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="audio1">
-  <p>Rain</p>
+  <p>Birds</p>
   <audio id="audio1_2" ref="audio" src="" loop></audio>
 <div class="controls1">
   <button ref="playBtn" v-on:click="play">Play </button>
@@ -17,7 +17,7 @@ export default {
   name: "Audio1",
   data() {
     return {
-      audioOne: new Audio("http://file.kuyinyun.com/group2/M00/EF/C0/rBBGelUPiWiACpYhAAQfE72-jHE679.mp3"),
+      audioOne: new Audio("https://www.dropbox.com/s/4mfwj15tb6k1are/birds_tilla.mp3?dl=1"),
       volumeVal: "0.2",
       hidden: true,
       visible:false

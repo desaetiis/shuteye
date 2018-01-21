@@ -17,7 +17,7 @@ export default {
   name: "Audio1",
   data() {
     return {
-      audioOne: new Audio("http://file.kuyinyun.com/group2/M00/EF/C0/rBBGelUPiWiACpYhAAQfE72-jHE679.mp3"),
+      audioOne: new Audio("https://www.dropbox.com/s/iozko5ymc63rv0b/rain.mp3?dl=1"),
       volumeVal: "0.2",
       hidden: true,
       visible:false
