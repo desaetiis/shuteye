@@ -51,14 +51,19 @@ export default {
   text-align: center;
   color: #7B8DAD;
   margin-top: 60px;
+
 }
 body {
+
 background-color: #182435;
 }
 .audiolist {
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 180px);
   grid-gap: 5px;
+  margin: auto;
+
 }
 
 .hidden {
@@ -71,7 +76,7 @@ background-color: #182435;
   position: fixed;
  margin: 0 auto;
  left: 2em;
- bottom: 2em;
+ top: 2em;
 }
 button {
   color: #C6CDE0;
