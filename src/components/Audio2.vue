@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "Audio1",
+  name: "Audio2",
   data() {
     return {
       audioOne: new Audio("https://www.dropbox.com/s/4mfwj15tb6k1are/birds_tilla.mp3?dl=1"),
@@ -42,7 +42,7 @@ export default {
     }
   },
   watch: {
-    volumeVal: function(val, oldVal){
+    volumeVal: function(val){
       this.audioOne.volume = val;
     }
 
@@ -56,8 +56,7 @@ export default {
 button {
   width: 120px;
   height: 120px;
-  background-image: url("../assets/rain.gif");
-  border: none;
+  border: 1px solid var(--light-grey);
 }
 input[type=range] {
   -webkit-appearance: none;

@@ -1,50 +1,27 @@
 <template lang="html">
-  <div id="audio1">
-  <p>Rain</p>
-  <audio id="audio1_2" ref="audio" src="" loop></audio>
-  <div class="controls1">
-  <button ref="playBtn" v-on:click="play">Play </button>
-  <button v-bind:class="{hidden}" @click="hidden=!hidden, visible=!visible" v-on:click="play">Pause</button>
-  </br>
-  <input id="volume" class="gain" type="range" v-model="volumeVal" min="0" max="1" step="0.001" value="0.2"></input>
-  <div> {{ volumeVal }}</div>
-  </div>
-  </div>
+  <div id="global_controls">
+  <span>Play</span>
+<span>Stop</span>
+  <span>Volume</span>
+
+
+</div>
 </template>
 
 <script>
 export default {
-  name: "Audio1",
+  name: "GlobalControls",
   data() {
     return {
-      audioOne: new Audio("https://www.dropbox.com/s/iozko5ymc63rv0b/rain.mp3?dl=1"),
-      volumeVal: "0.2",
-      hidden: true,
-      visible:false
+
 
 
     }
   },
   methods: {
-    play: function(event) {
-      var a = this.audioOne;
-      a.preload = "auto";
-      a.loop = true;
-      var playBtn = this.$refs.playBtn;
-      a.volume = this.volumeVal;
-      if (a.paused) {
-        a.play();
-        playBtn.textContent= "Pause";
-      } else {
-        a.pause();
-        playBtn.textContent= "Play";
-      }
-    }
+
   },
   watch: {
-    volumeVal: function(val){
-      this.audioOne.volume = val;
-      }
 
   }
 }
@@ -52,7 +29,17 @@ export default {
 </script>
 
 <style scoped>
-
+#global_controls {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-grey);
+}
+span {
+  color: var(--bcolor);
+}
 button {
   width: 120px;
   height: 120px;
@@ -85,7 +72,7 @@ input[type=range]::-webkit-slider-thumb {
   background: var(--light-grey);
   cursor: pointer;
   -webkit-appearance: none;
-margin-top: -9px;
+  margin-top: -9px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #c6cde0;
@@ -151,7 +138,4 @@ input[type=range]:focus::-ms-fill-upper {
   background: #c6cde0;
 }
 
-body {
-  padding: 30px;
-}
 </style>
